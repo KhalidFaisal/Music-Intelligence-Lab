@@ -1,0 +1,116 @@
+id: f56925bc-7df7-4cee-ad1e-c71c72713b57
+name: AI-Powered Data Discovery Engine
+type: 1
+canvas_id: 6bc89879-6c4f-4e16-8bd9-4e740464ccb0
+blocks:
+- auto_size: false
+  canvas_id: 6bc89879-6c4f-4e16-8bd9-4e740464ccb0
+  compute_settings: null
+  description: 'Creates 5 music trend visualizations: loudness war by decade, acousticness
+    decline, tempo by genre, genre market share evolution, and energy/danceability
+    trends over time.'
+  height: 1000
+  id: 513dae87-46a1-4185-8dbe-ae9818d3a12a
+  layer_id: f56925bc-7df7-4cee-ad1e-c71c72713b57
+  name: visualize_music_trends
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 0
+- auto_size: false
+  canvas_id: 6bc89879-6c4f-4e16-8bd9-4e740464ccb0
+  compute_settings: null
+  description: Segments songs into 6 mood archetypes using K-Means clustering on audio
+    features, then visualizes clusters with PCA and creates detailed mood profiles
+    with streaming performance metrics
+  height: 1000
+  id: 642b9fbe-ec94-4e1d-acb8-3e3722665369
+  layer_id: f56925bc-7df7-4cee-ad1e-c71c72713b57
+  name: cluster_mood_archetypes
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 1400
+- auto_size: false
+  canvas_id: 6bc89879-6c4f-4e16-8bd9-4e740464ccb0
+  compute_settings: null
+  description: Builds gradient boosting model to predict song popularity with feature
+    importance analysis and actionable what-if scenarios
+  height: 1000
+  id: bffe4555-705a-440f-9749-aff4b3619f9d
+  layer_id: f56925bc-7df7-4cee-ad1e-c71c72713b57
+  name: train_popularity_model
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 0
+- auto_size: false
+  canvas_id: 6bc89879-6c4f-4e16-8bd9-4e740464ccb0
+  compute_settings: null
+  description: Generates synthetic music dataset with 10K songs spanning 1960-2024,
+    including genre-specific audio features (tempo, energy, danceability, loudness,
+    acousticness) and era-adjusted trends like the loudness war and streaming era
+    bias.
+  height: 1000
+  id: cc54435b-94f3-4adf-8374-1023bdf0c45e
+  layer_id: f56925bc-7df7-4cee-ad1e-c71c72713b57
+  name: generate_songs_dataset
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 0
+- auto_size: false
+  canvas_id: 6bc89879-6c4f-4e16-8bd9-4e740464ccb0
+  compute_settings: null
+  description: 'Creates 5 publication-quality charts analyzing music''s evolution:
+    audio feature trends by decade, loudness war progression, emotional valence shifts,
+    feature-popularity correlations, and genre fingerprint radar plots with key insights'
+  height: 1000
+  id: de273c78-d7c7-452f-b133-754d6a56e21e
+  layer_id: f56925bc-7df7-4cee-ad1e-c71c72713b57
+  name: deep_eda_audio_evolution
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 2800
+edges:
+- canvas_id: 6bc89879-6c4f-4e16-8bd9-4e740464ccb0
+  id: 2a1d2ac4-fc95-4b6b-ac5b-0187c3629f5c
+  layer_id: f56925bc-7df7-4cee-ad1e-c71c72713b57
+  source: 513dae87-46a1-4185-8dbe-ae9818d3a12a
+  target: 642b9fbe-ec94-4e1d-acb8-3e3722665369
+- canvas_id: 6bc89879-6c4f-4e16-8bd9-4e740464ccb0
+  id: 3120a4e9-56be-4250-a24a-c8d4b34b5dc4
+  layer_id: f56925bc-7df7-4cee-ad1e-c71c72713b57
+  source: 513dae87-46a1-4185-8dbe-ae9818d3a12a
+  target: bffe4555-705a-440f-9749-aff4b3619f9d
+- canvas_id: 6bc89879-6c4f-4e16-8bd9-4e740464ccb0
+  id: 45d3a81c-da1d-40b1-b82f-b931ba499dec
+  layer_id: f56925bc-7df7-4cee-ad1e-c71c72713b57
+  source: cc54435b-94f3-4adf-8374-1023bdf0c45e
+  target: 513dae87-46a1-4185-8dbe-ae9818d3a12a
+- canvas_id: 6bc89879-6c4f-4e16-8bd9-4e740464ccb0
+  id: b5b1cedd-df4e-4203-9c89-1238e2efd13c
+  layer_id: f56925bc-7df7-4cee-ad1e-c71c72713b57
+  source: 513dae87-46a1-4185-8dbe-ae9818d3a12a
+  target: de273c78-d7c7-452f-b133-754d6a56e21e
